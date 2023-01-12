@@ -3,8 +3,8 @@
 https://www.javainuse.com/spring/boot_swagger3
 
 # Dependencies
-Spring boot: 2.2.8.RELEASE
-SpringDoc OpenApi UI: 1.2.32
+Spring boot: 2.6.4
+SpringDoc OpenApi UI: 1.6.14
 Java 8
 
 # Swagger url
