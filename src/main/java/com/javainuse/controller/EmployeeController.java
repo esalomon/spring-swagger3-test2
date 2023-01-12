@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.javainuse.model.Employee;
+import reactor.core.publisher.Flux;
 
 @RestController
 public class EmployeeController {
@@ -19,8 +20,8 @@ public class EmployeeController {
 	private List<Employee> employees = createList();
 
 	@RequestMapping(value = "/employees", method = RequestMethod.GET, produces = "application/json")
-	public List<Employee> firstPage() {
-		return employees;
+	public Flux<Employee> firstPage() {
+		return Flux.fromIterable(employees);
 	}
 
 	@DeleteMapping(path = { "/{id}" })
